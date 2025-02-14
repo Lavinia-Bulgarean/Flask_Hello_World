@@ -11,6 +11,10 @@ def MaPremiereAPI():
 @app.route("/cnam")
 def imageCnam():
     return render_template('cnam.html')
+
+@app.route("/papillon")
+def papillon():
+    return render_template('papilon.html')
                                                                                                                                        
 @app.route('/')
 def hello_world():

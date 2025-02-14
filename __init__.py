@@ -7,6 +7,11 @@ app = Flask(__name__)
 @app.route("/contact/")
 def MaPremiereAPI():
     return render_template('contact.html')
+
+app = Flask(__name__) 
+@app.route("/cnam")
+def MaPremiereAPI():
+    return render_template('cnam.html')
                                                                                                                                        
 @app.route('/')
 def hello_world():

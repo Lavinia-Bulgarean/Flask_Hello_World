@@ -19,6 +19,10 @@ def exercices():
 @app.route('/somme/<int:valeur1>/<int:valeur2>')
 def somme(valeur1, valeur2):
     result = valeur1 + valeur2
+  if result % 2 == 0:
+        message = "La somme est paire."
+    else:
+        message = "La somme est impaire."
     return "<h2>La somme de vos valeurs est : </h2>" + str(result)
 
   

@@ -4,28 +4,18 @@ from flask import json
 import sqlite3
                                                                                                                                        
 app = Flask(__name__) 
-@app.route("/contact/")
+@app.route("/cnam/")
 def MaPremiereAPI():
-    return render_template("contact.html")
-
-@app.route('/cnam')
-def cnam():
-    return render_template('cnam.html')
+    return render_template("cnam.html")
                                                                                                                                        
+@app.route('/')
+def hello_world():
+    return "<h2>Bonjour tout le monde !</h2><p>Pour accéder à vos exerices cliquez <a href='./exercices/'>Ici</a></p>" #cOmm2
 
+@app.route('/exercices/')
+def exercices():
+    return render_template('exercices.html')
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon site avec image</title>
-</head>
-<body>
-    <h1>Bienvenue sur mon site!</h1>
-    <img src="templates/cnam.html" alt="Mon Image">
-</body>
-</html>
-
+  
 if __name__ == "__main__":
   app.run(debug=True)

@@ -8,9 +8,8 @@ app = Flask(__name__)
 def MaPremiereAPI():
     return render_template('contact.html')
 
-app = Flask(__name__) 
 @app.route("/cnam")
-def MaPremiereAPI():
+def imageCnam():
     return render_template('cnam.html')
                                                                                                                                        
 @app.route('/')

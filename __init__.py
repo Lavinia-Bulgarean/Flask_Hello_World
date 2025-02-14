@@ -10,7 +10,7 @@ def MaPremiereAPI():
                                                                                                                                        
 @app.route('/')
 def hello_world():
-    return "<h2>Bonjour tout le monde !</h2><p>Pour accéder à vos exerices cliquez <a href='./exercices/'>Ici</a></p>" #comm2
+    return "<h2>Bonjour tout le monde !</h2><p>Pour accéder à vos exerices cliquez <a href='./exercices/'>Ici</a></p>" #cOmm2
 
 @app.route('/exercices/')
 def exercices():

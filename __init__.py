@@ -26,8 +26,6 @@ def somme(valeur1, valeur2):
     return f"<h2>La somme de vos valeurs est : {result}</h2><p>{message}</p>"
 
 @app.route('/somme_toutes/<int:valeur1>/<int:valeur2>/<int:valeur3>', methods=['GET'])
-@app.route('/somme_toutes/<int:valeur1>/<int:valeur2>', methods=['GET'])
-@app.route('/somme_toutes/<int:valeur1>', methods=['GET'])
 def somme_toutes(*valeurs):
     total = sum(valeurs)  # Utilisation de sum pour additionner toutes les valeurs
     return f"<h2>La somme de toutes vos valeurs est : {total}</h2>"

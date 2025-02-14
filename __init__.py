@@ -15,6 +15,10 @@ def imageCnam():
 @app.route("/papillon")
 def papillon():
     return render_template('papilon.html')
+
+@app.route("/lapin")
+def lapin():
+    return render_template('lapin.html')
                                                                                                                                        
 @app.route('/')
 def hello_world():

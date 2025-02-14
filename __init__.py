@@ -25,9 +25,14 @@ def somme(valeur1, valeur2):
         message = "La somme est impaire."
     return f"<h2>La somme de vos valeurs est : {result}</h2><p>{message}</p>"
 
-@app.route('/somme_toutes/<int:valeur1>/<int:valeur2>/<int:valeur3>', methods=['GET'])
-def somme_toutes(*valeurs):
-    total = sum(valeurs)  # Utilisation de sum pour additionner toutes les valeurs
+@app.route('/somme_toutes/<path:valeurs>', methods=['GET'])
+def somme_toutes(valeurs):
+    # Convertir la chaîne de caractères en liste de nombres
+    liste_valeurs = [int(x) for x in valeurs.split('/')]
+    
+    # Calculer la somme des valeurs
+    total = sum(liste_valeurs)
+    
     return f"<h2>La somme de toutes vos valeurs est : {total}</h2>"
 
   

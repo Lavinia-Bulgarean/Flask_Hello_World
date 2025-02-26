@@ -27,6 +27,10 @@ def imageExercice2():
 @app.route("/exercice_base3")
 def imageExercice3():
     return render_template('exercice_base3.html')
+
+@app.route("/formulaire")
+def formulaireex4():
+    return render_template('formulaire.html')
     
                                                                                                                                   
 @app.route('/')

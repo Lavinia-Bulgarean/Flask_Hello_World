@@ -34,7 +34,7 @@ def formulaireex4():
 
 @app.route("/TP1")
 def tp1ex5
-    return render_template('TP1.html')
+    return render_template('page1.html')
     
                                                                                                                                   
 @app.route('/')

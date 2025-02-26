@@ -12,13 +12,6 @@ def MaPremiereAPI():
 def imageCnam():
     return render_template('cnam.html')
 
-@app.route("/papillon")
-def papillon():
-    return render_template('papilon.html')
-
-@app.route("/lapin")
-def lapin():
-    return render_template('lapin.html')
                                                                                                                                        
 @app.route('/')
 def hello_world():

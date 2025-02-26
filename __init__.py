@@ -31,6 +31,10 @@ def imageExercice3():
 @app.route("/formulaire")
 def formulaireex4():
     return render_template('formulaire.html')
+
+@app.route("/TP1")
+def tp1ex5
+    return render_template('TP1.html')
     
                                                                                                                                   
 @app.route('/')

@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>Dresseur de Pokemon</h1>
-
+<p> Les champs marqués d'une * sont obligatoires.</p>
 <form action="#">
 <fieldset>
 <legend>Nouveau dresseur</legend>
@@ -15,17 +15,20 @@
 <p>Mr <input name="C" type="radio" value="Mr"/> 
 Mme<input name="C" type="radio" value="Mme"/></p>
 <p>
-Chien <input name="D" type="checkbox" value="Chien"/>
-Chat <input name="E" type="checkbox" value="Chat"/>
-Poisson <input name="F" type="checkbox" value="Poisson"/>
+</br>
+
+<p>Equipe </p>
+<p><input name="D" type="checkbox" value="Rouge"/> Rouge </p>
+<p><input name="E" type="checkbox" value="Jaune"/> Jaune </p>
+<p><input name="F" type="checkbox" value="Bleu"/> Bleu</p>
+
+<p>Anniversaire*</p> 
+<p><input name="B" type="Text" value="jj/mm/aaaa"/></p>
+
+<p><input type="submit" value="Envoyer" />
+
 </p>
-<p>
-<select name="G" multiple>
-	<option>Pain</option>
-	<option>Citron</option>
-	<option>Orange</option>
-</select>
-</p>
+</fieldset>
 <p>
 <textarea rows="3" cols="30	" name="H">
 Laisez nous un commentaire

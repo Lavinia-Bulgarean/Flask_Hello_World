@@ -23,12 +23,7 @@ def imageExercice1():
 @app.route("/exercice_base2")
 def imageExercice2():
     return render_template('exercice_base2.html')
-
-@app.route("exercice_base3")
-def imageExercice3():
-    return render_template('exercice_base3.html')
-
-                                                                                                                                       
+                                                                                                                                  
 @app.route('/')
 def hello_world():
     return "<h2>Bonjour tout le monde !</h2><p>Pour accéder à vos exerices cliquez <a href='./exercices/'>Ici</a></p>" #cOmm2

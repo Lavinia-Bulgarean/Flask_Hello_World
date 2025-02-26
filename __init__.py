@@ -24,6 +24,10 @@ def imageExercice1():
 def imageExercice2():
     return render_template('exercice_base2.html')
 
+@app.route("exercice_base3")
+def imageExercice3():
+    return render_template('exercice_base3.html')
+
                                                                                                                                        
 @app.route('/')
 def hello_world():

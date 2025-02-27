@@ -1,80 +1,65 @@
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dessin de Maison</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #dff6ff;
-        }
-        .scene {
-            position: relative;
-            width: 300px;
-            height: 300px;
-        }
-        .house {
-            position: absolute;
-            bottom: 50px;
-            left: 50px;
-            width: 200px;
-            height: 150px;
-            background-color: orange;
-            border: 2px solid black;
-        }
-        .roof {
-            position: absolute;
-            bottom: 150px;
-            left: 30px;
-            width: 0;
-            height: 0;
-            border-left: 90px solid transparent;
-            border-right: 90px solid transparent;
-            border-bottom: 60px solid red;
-        }
-        .door {
-            position: absolute;
-            bottom: 0;
-            left: 80px;
-            width: 40px;
-            height: 70px;
-            background-color: brown;
-            border: 2px solid black;
-        }
-        .window {
-            position: absolute;
-            top: 30px;
-            left: 20px;
-            width: 50px;
-            height: 50px;
-            background-color: lightblue;
-            border: 2px solid black;
-        }
-        .sun {
-            position: absolute;
-            top: -40px;
-            right: -60px;
-            width: 50px;
-            height: 50px;
-            background-color: yellow;
-            border-radius: 50%;
-        }
-    </style>
 </head>
 <body>
-    <div class="scene">
-        <div class="house"></div>
-        <div class="roof"></div>
-        <div class="door"></div>
-        <div class="window"></div>
-        <div class="sun"></div>
-    </div>
+    <svg width="500" height="500">
+        
+        <!-- Soleil -->
+        
+        <circle cx="400" cy="80" r="30" fill="yellow" stroke="black" stroke-width="2"/>
+        <line x1="400" y1="20" x2="400" y2="50" stroke="black" stroke-width="2"/>
+        <line x1="400" y1="110" x2="400" y2="140" stroke="black" stroke-width="2"/>
+        <line x1="360" y1="80" x2="330" y2="80" stroke="black" stroke-width="2"/>
+        <line x1="440" y1="80" x2="470" y2="80" stroke="black" stroke-width="2"/>
+        <line x1="370" y1="110" x2="350" y2="130" stroke="black" stroke-width="2"/>
+        <line x1="430" y1="110" x2="450" y2="130" stroke="black" stroke-width="2"/>
+
+        <!-- Nuages -->
+        
+        <ellipse cx="80" cy="60" rx="30" ry="15" fill="lightgray"/>
+        <ellipse cx="110" cy="50" rx="25" ry="15" fill="lightgray"/>
+        <ellipse cx="140" cy="60" rx="30" ry="15" fill="lightgray"/>
+
+        <ellipse cx="350" cy="40" rx="30" ry="15" fill="lightgray"/>
+        <ellipse cx="380" cy="30" rx="25" ry="15" fill="lightgray"/>
+        <ellipse cx="410" cy="40" rx="30" ry="15" fill="lightgray"/>
+
+        <!-- Maison -->
+        
+        <rect x="150" y="200" width="200" height="200" fill="yellow" stroke="black" stroke-width="2"/>
+        
+        <!-- Toit -->
+        <polygon points="150,200 250,100 350,200" fill="red" stroke="black" stroke-width="2"/>
+
+        <!-- Cheminée -->
+        <rect x="160" y="130" width="20" height="40" fill="red" stroke="black" stroke-width="2"/>
+        <path d="M165,130 C160,120 170,110 165,100 C160,90 170,80 165,70" stroke="black" stroke-width="2" fill="none"/>
+        
+        <!-- Fenêtre toit -->
+        <circle cx="250" cy="160" r="20" fill="lightblue" stroke="black" stroke-width="2"/>
+        <line x1="180" y1="265" x2="230" y2="265" stroke="black" stroke-width="2"/>
+        <line x1="205" y1="240" x2="205" y2="290" stroke="black" stroke-width="2"/>
+        
+        <!-- Porte -->
+        <rect x="230" y="300" width="50" height="100" fill="brown" stroke="black" stroke-width="2"/>
+        
+        <!-- Fenêtre -->
+        <rect x="180" y="240" width="50" height="50" fill="lightblue" stroke="black" stroke-width="2"/>
+        <line x1="180" y1="265" x2="230" y2="265" stroke="black" stroke-width="2"/>
+        <line x1="205" y1="240" x2="205" y2="290" stroke="black" stroke-width="2"/>
+        
+        <!-- Herbe -->
+        <ellipse cx="120" cy="400" rx="30" ry="10" fill="green"/>
+        <ellipse cx="90" cy="400" rx="20" ry="5" fill="green"/>
+        <circle cx="100" cy="390" r="5" fill="red"/>
+        <circle cx="110" cy="390" r="5" fill="yellow"/>
+
+        <!-- Fleurs -->
+        <circle cx="320" cy="420" r="7" fill="red"/>
+        <circle cx="330" cy="415" r="7" fill="yellow"/>
+        <rect x="327" y="425" width="6" height="15" fill="green"/>
+    </svg>
 </body>
 </html>
-
-   
-       

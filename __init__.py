@@ -47,6 +47,10 @@ def exvallet():
 @app.route("/chenille")
 def exchenille():
     return render_template('chenille.html')
+
+@app.route("/carre")
+def excarrecss():
+    return render_template('CSS_Carre.html')
     
                                                                                                                                   
 @app.route('/')

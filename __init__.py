@@ -42,7 +42,7 @@ def exmaison():
 
 @app.route("/vallet")
 def exvallet():
-    return render_templete('svg-cards.svg')
+    return render_templete('svg-cards.html')
     
                                                                                                                                   
 @app.route('/')

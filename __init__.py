@@ -39,6 +39,10 @@ def tp1ex5():
 @app.route("/maison")
 def exmaison():
     return render_template('Exemple_Base_SVG.html')
+
+@app.route("/vallet")
+def exvallet():
+    return render_templete('svg-cards.svg')
     
                                                                                                                                   
 @app.route('/')

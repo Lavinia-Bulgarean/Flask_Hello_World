@@ -36,7 +36,7 @@ def formulaireex4():
 def tp1ex5():
     return render_template('page1.html')
 
-@app.route("/maison1")
+@app.route("/maison")
 def exmaison():
     return render_template('Exemple_Base_SVG.html')
     

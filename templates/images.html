@@ -10,21 +10,26 @@
     <div id="zone1"></div>
 
 
-    <!-- Les images avec un ID correspondant -->
-    <img src="{{ url_for('static', filename='photo1.jpg') }}" alt="Du texte1">
-    <img src="{{ url_for('static', filename='photo2.jpg') }}" alt="Du texte2">
-    <img src="{{ url_for('static', filename='photo3.jpg') }}" alt="Du texte3">
-
     <script>
-       function afficherImeges(){
-       var Result="";
-	        for(i=1;i<4;i++){
-	        if(document.getElementById('choix'+i).checked){
-       Result = Result+'<img width="150px" src="Image'+i+'.jpg"/><br/>';
-		        }
-	        }
-       document.getElementById('zone1').innerHTML = Result;	
-        }
+      function afficherImages(){
+	if(document.getElementById('choix1').checked){
+		document.getElementById('image1').innerHTML = "<img src='../static/photo1.jpg' alt='Image 1' width='150'>";
+	} else {
+		document.getElementById('image1').innerHTML = "";
+	}
+
+	if(document.getElementById('choix2').checked){
+		document.getElementById('image2').innerHTML = "<img src='../static/photo2.jpg' alt='Image 2' width='150'>";
+	} else {
+		document.getElementById('image2').innerHTML = "";
+	}
+
+	if(document.getElementById('choix3').checked){
+		document.getElementById('image3').innerHTML = "<img src='../static/photo.jpg' alt='Image 3' width='150'>";
+	} else {
+		document.getElementById('image3').innerHTML = "";
+	}
+}
     </script>
 
 </body>

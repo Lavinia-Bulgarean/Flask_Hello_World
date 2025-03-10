@@ -3,13 +3,12 @@
 <body>
 
     <h2>Image(s) à afficher ?</h2>
-    <input type="checkbox" id="pht1"> Image 1<br>
-    <input type="checkbox" id="pht2"> Image 2<br>
-    <input type="checkbox" id="pht3"> Image 3<br><br>
-
+    <input type="checkbox" id="choix1"/>Image 1<br/>
+    <input type="checkbox" id="choix2"/>Image 2<br/>
+    <input type="checkbox" id="choix3"/>Image 3<br/></p>
     <button onclick="afficherImages()">Afficher</button>
+    <div id="zone1"></div>
 
-    <br><br>
 
     <!-- Les images avec un ID correspondant -->
     <img src="{{ url_for('static', filename='photo1.jpg') }}" alt="Du texte1">

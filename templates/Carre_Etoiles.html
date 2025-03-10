@@ -4,38 +4,35 @@
 <script>
         function afficher() {
             var saisie = parseInt(document.getElementById('V1').value);
-            var resultat = "";    
-
-            for (j=0; j<saisie ; j++) {
-                         for (i=0; i<saisie ; i++) {
-                                 if (i+1<saisie-j) {
-                                         resultat += ""
-                                 } 
-                                 else {
-                                 	 resultat += "**";
-                                 }
-                          
-                 	 }
-                 	 resultat += "</br>";
-        	}
+            var resultat = "";  
+		
+	for (j=0; j<saisie ; j++){
+             for (m=0; m<saisie - j; m++){
+                     resultat += "&nbsp;&nbsp;";
+             }
+       	     for (i=0; i<j + 1 ; i++){ 
+                     resultat += "**"; 
+             }
+                     resultat += "</br>";
+       	     }
+	for (j=0; j<saisie ; j++){
+            for (m=0; m<j+1; m++){
+                    resultat += "&nbsp;&nbsp;";
+             }
+             for (i=0; i<saisie-j ; i++){ 
+                     resultat += "**"; 
+             }
+                     resultat += "</br>";
+       	     }
 	
-         	for (j=0; j<saisie ; j++) {
-                 	for (i=0; i<saisie ; i++) {
-                         	if (i+1<j+1) {
-                                 	resultat += ""
-                         	} 
-                         	else {
-                                 	resultat += "**";
-                         	}
-                          
-                 	}
-                 	resultat += "</br>";
-         	}
-	document.getElementById('result').textContent = resultat;
-    }
-    </script>
+	document.getElementById('result').innerHTML = resultat;
 
 
+}
+
+</script>
+
+            
 </head>
 <body>
 <h1>Les étoiles</h1>

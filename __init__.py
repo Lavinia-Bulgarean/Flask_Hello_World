@@ -51,6 +51,10 @@ def exchenille():
 @app.route("/carre")
 def excarrecss():
     return render_template('CSS_Carre.html')
+
+@app.route("/etoiles")
+def exjavascript():
+    return render_template('Carre_Etoiles.html')
     
                                                                                                                                   
 @app.route('/')

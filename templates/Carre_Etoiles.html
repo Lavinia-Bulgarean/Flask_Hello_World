@@ -6,7 +6,8 @@
 function afficher(){
 	
 	var saisie = parseInt(document.getElementById('V1').value);
-	var resultat = "";	
+	var resultat = "";
+	var resultats ="";
 
 	for (j=0; j<saisie ; j++){
         for (i=0; i<saisie-j; i++){
@@ -23,6 +24,7 @@ function afficher(){
 	
 	
 	document.getElementById('result').innerHTML = resultat;
+	document.getElementById('results').innerHTML = resultats;
 
 }
 

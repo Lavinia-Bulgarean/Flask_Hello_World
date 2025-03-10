@@ -7,24 +7,22 @@ function afficher(){
 	
 	var saisie = parseInt(document.getElementById('V1').value);
 	var resultat = "";
-	var resultats ="";
-
-	for (j=0; j<saisie ; j++){
-        for (i=0; i<saisie-j; i++){
-                resultats += "  "; 
-        }
-		resultats += "</br>";
-	for(i=0; i<j+1; i++){
-		
-                resultat += "*" 
-	}
-		resultat += "</br>";
-		
-        }
 	
+	for (var j = 1; j <= saisie; j++) { // De 1 à saisie
+                // Ajouter des espaces pour l'alignement à droite
+                for (var espace = 0; espace < saisie - j; espace++) {
+                    resultat += " ";
+                }
+                // Ajouter des étoiles
+                for (var i = 0; i < j; i++) {
+                    resultat += "*";
+                }
+                resultat += "\n"; // Nouvelle ligne pour le triangle
+            }
+
 	
 	document.getElementById('result').innerHTML = resultat;
-	document.getElementById('results').innerHTML = resultats;
+	
 
 }
 

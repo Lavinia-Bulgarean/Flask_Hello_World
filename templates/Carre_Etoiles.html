@@ -6,9 +6,10 @@
             var saisie = parseInt(document.getElementById('V1').value);
             var resultat = "";  
 		
-	for (i=1; i<=10 ; i++){
-             resultat += nombre + " * " + i + " = " + (nombre * i) + "<br>";
-            }
+	    for (i=1; i<=10 ; i++){
+                        resultat += saisie + " x " + i + " = " + saisie*i
+                        resultat += "</br>";
+                } 
 	
 	document.getElementById('result').innerHTML = resultat;
 

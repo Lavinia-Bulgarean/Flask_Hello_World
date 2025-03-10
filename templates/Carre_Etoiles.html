@@ -6,23 +6,9 @@
             var saisie = parseInt(document.getElementById('V1').value);
             var resultat = "";  
 		
-	for (j=0; j<saisie ; j++){
-             for (m=0; m<saisie - j; m++){
-                     resultat += "&nbsp;&nbsp;";
-             }
-       	     for (i=0; i<j + 1 ; i++){ 
-                     resultat += "**"; 
-             }
-                     resultat += "</br>";
-       	     }
-	for (j=0; j<saisie ; j++){
-            for (m=0; m<j+1; m++){
-                    resultat += "&nbsp;&nbsp;";
-             }
-             for (i=0; i<saisie-j ; i++){ 
-                     resultat += "**"; 
-             }
-                     resultat += "</br>";
+	for (i=1; i<=10 ; i++){
+             resultat += "nombre * i";
+             resultat += "</br>";
        	     }
 	
 	document.getElementById('result').innerHTML = resultat;

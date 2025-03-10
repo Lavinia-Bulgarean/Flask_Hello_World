@@ -55,6 +55,10 @@ def excarrecss():
 @app.route("/etoiles")
 def exjavascript():
     return render_template('Carre_Etoiles.html')
+
+@app.route("/images")
+def javaimages():
+    return render_template('images.html')
     
                                                                                                                                   
 @app.route('/')

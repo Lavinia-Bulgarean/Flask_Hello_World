@@ -6,32 +6,31 @@
             var saisie = parseInt(document.getElementById('V1').value);
             var resultat = "";    
 
-           // Partie supérieure du losange
-            for (var j = 1; j <= saisie; j++) {
-                // Ajouter des espaces pour centrer les étoiles
-                for (var espace = 0; espace < saisie - j; espace++) {
-                    resultat += " ";
-                }
-                // Ajouter les étoiles (2*j)
-                for (var i = 0; i < 2 * j; i++) {
-                    resultat += "*";
-                }
-                resultat += "\n"; // Nouvelle ligne
-            }
-
-            // Partie inférieure du losange (miroir de la partie supérieure)
-            for (var j = saisie; j >= 1; j--) {
-                // Ajouter des espaces pour centrer les étoiles
-                for (var espace = 0; espace < saisie - j; espace++) {
-                    resultat += " ";
-                }
-                // Ajouter les étoiles (2*j)
-                for (var i = 0; i < 2 * j; i++) {
-                    resultat += "*";
-                }
-                resultat += "\n"; // Nouvelle ligne
-            }
- 
+           for (j=0; j<saisie ; j++) {
+                 for (i=0; i<saisie ; i++) {
+                         if (i+1<saisie-j) {
+                                 resultat += " "
+                         } 
+                         else {
+                                 resultat += "**";
+                         }
+                          
+                 }
+                 resultat += "</br>";
+        }
+	
+         for (j=0; j<saisie ; j++) {
+                 for (i=0; i<saisie ; i++) {
+                         if (i+1<j+1) {
+                                 resultat += " "
+                         } 
+                         else {
+                                 resultat += "**";
+                         }
+                          
+                 }
+                 resultat += "</br>";
+         }
 
             document.getElementById('result').textContent = resultat;
         }

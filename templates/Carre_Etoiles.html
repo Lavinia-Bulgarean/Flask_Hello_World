@@ -6,34 +6,33 @@
             var saisie = parseInt(document.getElementById('V1').value);
             var resultat = "";    
 
-           for (j=0; j<saisie ; j++) {
-                 for (i=0; i<saisie ; i++) {
-                         if (i+1<saisie-j) {
-                                 resultat += " "
-                         } 
-                         else {
-                                 resultat += "**";
-                         }
+            for (j=0; j<saisie ; j++) {
+                         for (i=0; i<saisie ; i++) {
+                                 if (i+1<saisie-j) {
+                                         resultat += " "
+                                 } 
+                                 else {
+                                 	 resultat += "**";
+                                 }
                           
-                 }
-                 resultat += "</br>";
-        }
+                 	 }
+                 	 resultat += "</br>";
+        	}
 	
-         for (j=0; j<saisie ; j++) {
-                 for (i=0; i<saisie ; i++) {
-                         if (i+1<j+1) {
-                                 resultat += " "
-                         } 
-                         else {
-                                 resultat += "**";
-                         }
+         	for (j=0; j<saisie ; j++) {
+                 	for (i=0; i<saisie ; i++) {
+                         	if (i+1<j+1) {
+                                 	resultat += " "
+                         	} 
+                         	else {
+                                 	resultat += "**";
+                         	}
                           
-                 }
-                 resultat += "</br>";
-         }
-
-            document.getElementById('result').textContent = resultat;
-        }
+                 	}
+                 	resultat += "</br>";
+         	}
+	document.getElementById('result').textContent = resultat;
+    }
     </script>
 
 

@@ -10,9 +10,13 @@ function afficher(){
 		
 	for (j = 0; j < saisie; j++) {
         for (i = 0; i < saisie-j; i++) {
-                resultat += "*"; 
+                resultat += " "; 
         }
-                resultat += "</br>";
+         for (i=0; i<j; i++) {
+
+		resultat += "*"
+		
+		resultat += "</br>";
         }
 	
 	document.getElementById('result').innerHTML = resultat;

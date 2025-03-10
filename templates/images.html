@@ -17,16 +17,14 @@
     <img src="{{ url_for('static', filename='photo3.jpg') }}" alt="Du texte3">
 
     <script>
-        function afficherImages() {
-            // Récupérer les cases à cocher et les images
-            var check1 = document.getElementById('img1').checked;
-            var check2 = document.getElementById('img2').checked;
-            var check3 = document.getElementById('img3').checked;
-
-            // Afficher ou cacher les images en fonction des cases cochées
-            document.getElementById('image1').style.display = check1 ? "block" : "none";
-            document.getElementById('image2').style.display = check2 ? "block" : "none";
-            document.getElementById('image3').style.display = check3 ? "block" : "none";
+       function afficherImeges(){
+       var Result="";
+	        for(i=1;i<4;i++){
+	        if(document.getElementById('choix'+i).checked){
+       Result = Result+'<img width="150px" src="Image'+i+'.jpg"/><br/>';
+		        }
+	        }
+       document.getElementById('zone1').innerHTML = Result;	
         }
     </script>
 

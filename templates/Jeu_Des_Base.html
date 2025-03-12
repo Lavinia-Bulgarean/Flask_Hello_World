@@ -3,7 +3,7 @@
     <script>
       function lancer(){
         var Val = Math.floor((Math.random() * 2)+1);
-        document.getElementById('C4').style.display = 'none';
+                document.getElementById('C4').style.display = 'none';
 		document.getElementById('C1').style.display = 'none';
 		document.getElementById('C7').style.display = 'none';
 	        document.getElementById('C2').style.display = 'none';
@@ -16,13 +16,14 @@
                     break;
 
         case 2 :
-                    document.getElementById('C7').style.display = 'none';
-                    document.getElementById('C1').style.display = 'none';
-			
+                    document.getElementById('C7').style.display = 'block';
+                    document.getElementById('C1').style.display = 'block';
+		    break;
 			
 	case 3 :
-                  document.getElementById('C2').style.display = 'none';
-		  document.getElementById('C3').style.display = 'none';
+                  document.getElementById('C2').style.display = 'block';
+		  document.getElementById('C3').style.display = 'block';
+	          break;
 				
         }
         

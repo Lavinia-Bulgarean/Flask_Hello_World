@@ -59,6 +59,10 @@ def exjavascript():
 @app.route("/images")
 def javaimages():
     return render_template('images.html')
+
+@app.route("/jeu_des")
+def SVGjavascript():
+    return render_template('Jeu_Des_Base.html')
     
                                                                                                                                   
 @app.route('/')

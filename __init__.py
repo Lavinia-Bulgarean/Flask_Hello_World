@@ -63,6 +63,10 @@ def javaimages():
 @app.route("/jeu_des")
 def SVGjavascript():
     return render_template('Jeu_Des_Base.html')
+
+@app.route("/roulette_russe")
+def exjavaroulette():
+    return render_template('Barillet_Vide.html')
     
                                                                                                                                   
 @app.route('/')

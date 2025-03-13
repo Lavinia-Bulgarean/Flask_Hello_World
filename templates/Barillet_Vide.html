@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
+</html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roulette Russe</title>
+    
     <script>
         var balles = []; 
         var gains = 0;
@@ -18,60 +15,41 @@
                 chambre.style.fill = "red";
                 balles.push(numero);
             } else {
-                alert("⚠️ Vous pouvez placer 3 balles maximum !");
+                alert("Vous pouvez placer 3 balles maximum !");
             }
         }
 
         function jouer() {
             if (balles.length === 0) {
-                alert("⚠️ Placez au moins une balle avant de jouer !");
+                alert("Placez au moins une balle avant de jouer !");
                 return;
             }
 
             var chiffreAleatoire = Math.floor(Math.random() * 6) + 1;
             var chambreTirée = document.getElementById("Br" + chiffreAleatoire);
 
-            // Réinitialiser toutes les chambres non sélectionnées
+          
             for (var i = 1; i <= 6; i++) {
                 if (!balles.includes(i)) {
                     document.getElementById("Br" + i).style.fill = "gray";
                 }
             }
 
-            // Colorer la chambre tirée en bleu
+            
             chambreTirée.style.fill = "blue";
 
-            // Vérifier le résultat
+           
             if (balles.includes(chiffreAleatoire)) {
-                alert("💥 Perdu ! Vous avez été touché !");
-                gains = 0; // Perte totale des gains
+                alert("Perdu!");
+                gains = 0; // 
             } else {
                 var gainActuel = balles.length === 1 ? 10000 : balles.length === 2 ? 100000 : 1000000;
                 gains += gainActuel;
-                alert("🎉 Gagné ! Vous remportez " + gainActuel.toLocaleString() + " € !\nTotal cumulé : " + gains.toLocaleString() + " €");
+                alert("Gagné ! Vous  avez " + gainActuel.toLocaleString() + " € !\nTotal cumulé : " + gains.toLocaleString() + " €");
             }
         }
     </script>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: inline-block;
-            position: relative;
-            margin-top: 20px;
-        }
-        svg {
-            cursor: pointer;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
+    
 </head>
 <body>
 

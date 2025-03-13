@@ -1,26 +1,71 @@
 </html>
 <head>
 <script>
-function lancer(){
-	 var Val = Math.floor((Math.random() * 6)+1);
-        	alert("Il a tourné " + Val + " fois");
-		if(document.getElementById("Br" + Val).style.fill=="red"){
-			alert("Perdu");
-		}
-		else{alert("Gagné");}
+     var balles = []; // Stocke les chambres contenant une balle
+     var gains = 0;
+
+     function ajouterBalle(numero) {
+        var chambre = document.getElementById("Br" + numero);
+
+     	if (balles.includes(numero)) {
+                chambre.style.fill = "gray";
+                balles = balles.filter(function(n) { return n !== numero; });
+            } else if (balles.length < 3) {
+                chambre.style.fill = "red";
+                balles.push(numero);
+            } else {
+                alert("Vous pouvez placer 3 balles maximum !");
+            }
         }
-function afficherChambre(numero) {
-            alert("Chambre numéro : " + numero);
-	    document.getElementById("Br" + numero).style.fill = "red";
+	function jouer() {
+            if (balles.length === 0) {
+                alert("Placez au moins une balle pour jouer !");
+                return;
+            }
+
+            var chiffreAleatoire = Math.floor(Math.random() * 6) + 1;
+            var chambreTirée = document.getElementById("Br" + chiffreAleatoire);
+
+            for (var i = 1; i <= 6; i++) {
+                if (!balles.includes(i)) {
+                    document.getElementById("Br" + i).style.fill = "gray";
+                }
+            }
+
+            chambreTirée.style.fill = "blue";
+
+            if (balles.includes(chiffreAleatoire)) {
+                alert("Perdu!");
+                gains = 0;
+            } else {
+                var gainActuel = balles.length === 1 ? 10000 : balles.length === 2 ? 100000 :  balles.length === 3 ? 1000000;
+                gains += gainActuel;
+                alert(Gagné ! Vous gagnez " + gainActuel.toLocaleString() + " € !\nTotal cumulé : " + gains.toLocaleString() + " €");
+            }
+        }
+
+	
+//function lancer(){
+	// var Val = Math.floor((Math.random() * 6)+1);
+        	//alert("Il a tourné " + Val + " fois");
+		//if(document.getElementById("Br" + Val).style.fill=="red"){
+			//alert("Perdu");
+		//}
+		//else{alert("Gagné");}
+       // }
+//function afficherChambre(numero) {
+  //          alert("Chambre numéro : " + numero);
+	//    document.getElementById("Br" + numero).style.fill = "red";
             
 	
-}
+//}
 </script>
 
                 
 </head>
 <body>
 	<h1>Roulette Russe</h1>
+	<p>Vous pouvez mettre une balle (max 3), puis cliquez sur "Jouer".</p>
 
 	<svg width=200 height=200 style="background-color:antiquewhite">
 	<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />

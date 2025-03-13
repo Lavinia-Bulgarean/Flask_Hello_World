@@ -6,6 +6,17 @@ function lancer(){
         	alert(Val);
 
 }
+
+function jouer() {
+            var chiffreAleatoire = Math.floor(Math.random() * 6) + 1; 
+            var chambreTirée = document.getElementById("Br" + chiffreAleatoire);
+
+            if (chambreTirée.style.fill === "red") {
+                alert("Chiffre tiré : " + chiffreAleatoire + " perdu !");
+            } else {
+                alert("Chiffre tiré : " + chiffreAleatoire + " gagné !");
+            }
+        }
 function afficherChambre(numero) {
             alert("Chambre numéro : " + numero);
 	    document.getElementById("Br" + numero).style.fill = "red";

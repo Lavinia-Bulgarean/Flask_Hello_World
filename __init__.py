@@ -10,7 +10,7 @@ def MaPremiereAPI():
 
 @app.route("/cnam")
 def imageCnam():
-    return render_template('cnam.html')
+    return render_template('cnam.html') 
   
 @app.route("/lapin")
 def imageLapin():
